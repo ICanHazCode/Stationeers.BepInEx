@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Example BepInEx Stationeers Plugin</Name>
+  <Author>author</Author>
+  <Version>1.0.0</Version>
+  <Description>YOUR DESCRIPTION HERE
+---
+WARNING: This mod will not work unless you install [url=https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21]BepInEx 5.x[/url].
+---
+  </Description>
+  <Tags />
+</ModMetadata>
+

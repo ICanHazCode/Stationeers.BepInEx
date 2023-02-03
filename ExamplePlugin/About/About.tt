@@ -1,0 +1,21 @@
+﻿<#@ template debug="true" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(MSBuildProjectExtensionsPath)$(Configuration)\$(TargetFileName)" #>
+<#@ import namespace="ExamplePlugin.Source" #>
+<#@ output extension=".xml" #>
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name><#= PluginInfo.PLUGIN_NAME #></Name>
+  <Author><#= PluginInfo.PLUGIN_AUTHOR #></Author>
+  <Version>1.0.0</Version>
+  <Description>YOUR DESCRIPTION HERE
+---
+WARNING: This mod will not work unless you install [url=https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21]BepInEx 5.x[/url].
+---
+  </Description>
+<# if(PluginInfo.PLUGIN_ID > 0) { #>
+  <!-- This will be your PluginInfo.PLUGIN_ID-->
+  <WorkshopHandle><#= PluginInfo.PLUGIN_ID #></WorkshopHandle> <# } #>
+  <Tags />
+</ModMetadata>
+
