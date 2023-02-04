@@ -1,4 +1,4 @@
-﻿# Stationeers Visual Studio BepInex Plugin Template #
+﻿# Stationeers Visual Studio BepInEx Plugin Template #
 A Visual Studio solution and project template to get started on building your own BepInEx-based Stationeers plugin.
 
 Based on code from silentdeth and his BepInEx plugins for Stationeers.

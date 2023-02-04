@@ -23,7 +23,8 @@ This is the T4 template used to generate `About.xml` from `PluginInfo.cs`, `desc
 Description shown in the Workshop for the plugin
 
 #### `About\tags.ttinclude`
-A list of tags for the plugin. These are the tags they are organized into in the workshop
+A list of tags for the plugin. These are the tags that are listed in the workshop. One tag per line.
+
 Available tags are:
 - World Save
 - Mod
