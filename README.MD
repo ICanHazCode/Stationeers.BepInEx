@@ -1,6 +1,7 @@
 ﻿# Stationeers Visual Studio BepInex Plugin Template #
+A Visual Studio solution and project template to get started on building your own BepInEx-based Stationeers plugin.
 
-A project template to get started on building your own BepInEx-based Stationeers plugin.
+Based on code from silentdeth and his BepInEx plugins for Stationeers.
 
 
 
@@ -25,13 +26,15 @@ This requires BepInEx 5.4 or better.
 * Navigate to the BepInEx folder in your Stationeers directory.
 * You should have "plugins" and "patchers" folders inside that directory like: ![picture alt](https://i.imgur.com/JRwmSie.png)
 * To tell BepInEx to look in our workshop folders we need to make a symbolic link to that folder. A symbolic link is like a advanced shortcut. You only need to do this **once** to get **all** BepInEx workshop mods to work. 
-* Goto [Stationeers.BepInEx](https://github.com/ICanHazCode/Stationeers.BepInEx) and download either `setlinks.ps1`(Windows) or `setlinks.sh`(Mac/Linux)
-* For Mac: To make things easier to do [Create a keyboard shortcut](https://www.maketecheasier.com/launch-terminal-current-folder-mac/)
-* Linux Ubuntu after 15.04, and any Linux using the latest nautilus should have the functionalty already installed.
-* Copy `setlinks.ps1`(Windows) `setlinks.sh`(Linux/Mac) to the BepInEx folder.
-* For Windows: Right-Click on `setlinks.ps1` and `Run With PowerShell`(Windows). This will ask you to run as Administrator as the commands require elevated permissions.
-* For Linux: `Right-Click > Open in Terminal` and type `sudo chmod +x setlinks.sh` then hit enter. It may ask you to enter in your password because it's an administrative command.
-* For Mac: In the BepInEx Folder window, use the keyboard shortcut you setup earlier. Then type `sudo chmod u+x setlinks.sh` and hit enter. It may ask you to enter in your password because it's an administrative command.
-* For Mac/Linux: Now type `./setlinks.sh` and hit enter. You may need to enter in your password for it to run.
-* The links should be setup now. Check the patchers and plugins folders in BepInEx for the folder `workshop`.
+1) Mac and Linux computers: We need to be able to open a Terminal window in the BepInEx directory
+  * For Mac: To make things easier to do: [Create a keyboard shortcut](https://www.maketecheasier.com/launch-terminal-current-folder-mac/)
+  * Linux Ubuntu after 15.04, and any Linux using the latest nautilus should have the functionalty already installed.
+2) Download either `setlinks.ps1`(Windows) or `setlinks.sh`(Mac/Linux) from this repository.
+3) Copy `setlinks.ps1`(Windows) or `setlinks.sh`(Linux/Mac) to the BepInEx folder.
+4) Now we execute the script:
+  * For Windows: Right-Click on `setlinks.ps1` and `Run With PowerShell`(Windows). This will ask you to run as Administrator as the commands require elevated permissions.
+  * For Linux: `Right-Click > Open in Terminal` and type `sudo chmod +x setlinks.sh` then hit enter. It may ask you to enter in your password because it's an administrative command.
+  * For Mac: In the BepInEx Folder window, use the keyboard shortcut you setup earlier. Then type `sudo chmod u+x setlinks.sh` and hit enter. It may ask you to enter in your password because it's an administrative command.
+  * For Mac/Linux: Now type `./setlinks.sh` and hit enter. You may need to enter in your password for it to run.
+5) The links should be setup now. Check the patchers and plugins folders in BepInEx for the folder `workshop`.
 

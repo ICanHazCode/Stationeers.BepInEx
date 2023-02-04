@@ -3,11 +3,13 @@
   <Name>Example BepInEx Stationeers Plugin</Name>
   <Author>author</Author>
   <Version>1.0.0</Version>
-  <Description>YOUR DESCRIPTION HERE
+  <Description>SHORT DESCRIPTION HEADER HERE
 ---
 WARNING: This mod will not work unless you install [url=https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21]BepInEx 5.x[/url].
+Instructions to install BepInEx [url=https://github.com/ICanHazCode/Stationeers.BepInEx#bepinex-install-instructions]Stationeers.BepInEx[/url]
 ---
-  </Description>
-  <Tags />
+YOUR FULL DESCRIPTION HERE</Description>
+  <Tags>
+  </Tags>
 </ModMetadata>
 
