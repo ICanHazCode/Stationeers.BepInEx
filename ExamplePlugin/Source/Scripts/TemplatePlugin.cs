@@ -23,9 +23,11 @@ namespace ExamplePlugin.Source.Scripts
 		public static bool DEBUG = true;
 		private static Harmony harmony;
 		public ExamplePlugin ()
-		{
+		{			
 			Log = Logger;
 			ModSettings.Log = Logger;
+			ModSettings.configFile = Config;
+			ModSettings.LoadModSettings();
 		}
 		[UsedImplicitly]
 		private void Awake()
@@ -33,7 +35,6 @@ namespace ExamplePlugin.Source.Scripts
 			// This is where the mod starts.
 			// Do your initialization here.
 			// Run your patches in Patch()
-			ModSettings.configFile = Config;
 			if (ModSettings.IsEnabled)
 			{
 				Log.LogMessage($"{PluginInfo.PLUGIN_NAME} {PluginInfo.PLUGIN_VERSION} loaded.");
@@ -45,7 +46,7 @@ namespace ExamplePlugin.Source.Scripts
 		// This is whre your patch will happen
 		private void Patch()
 		{
-			DEBUG = ModSettings.configDebug.Value;
+			DEBUG = ModSettings.Debug.Value;
 			harmony = new Harmony(PluginInfo.PLUGIN_GUID);
 			harmony.PatchAll();
 			Log.LogMessage($"{PluginInfo.PLUGIN_NAME} patching finished.");

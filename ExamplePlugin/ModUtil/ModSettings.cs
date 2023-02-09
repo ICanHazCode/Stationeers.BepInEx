@@ -19,7 +19,7 @@ namespace ExamplePlugin.ModUtil
 	public class ModSettings
 	{
 		public static ManualLogSource Log;
-		public static ConfigEntry<bool> configDebug;
+		public static ConfigEntry<bool> Debug;
 
 		public static ConfigFile configFile; 
 		public static bool IsEnabled
@@ -27,7 +27,7 @@ namespace ExamplePlugin.ModUtil
 			get
 			{
 				if (WorkshopMenu.ModsConfig is null)
-					LoadModConfig();
+					WorkshopMenu.LoadModConfig();
 				bool enabled = false;
 				foreach (ModData mod in WorkshopMenu.ModsConfig.GetEnabledMods())
 				{
@@ -41,11 +41,9 @@ namespace ExamplePlugin.ModUtil
 			}
 		}
 
-		public static void LoadModConfig()
+		public static void LoadModSettings()
 		{
-			configDebug = configFile.Bind("Debug", "EnableDebug",  false, "If true, writes debug information to log file.");
-			if (WorkshopMenu.ModsConfig is null)
-				WorkshopMenu.LoadModConfig();
+			Debug = configFile.Bind("Debug", "EnableDebug",  false, "If true, writes debug information to log file.");
 			//ModsConfig = File.Exists("modconfig.xml") ? Deserialize<ModConfig>("modconfig.xml") : new ModConfig();
 		}
 	}
